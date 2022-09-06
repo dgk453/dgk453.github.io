@@ -54,7 +54,7 @@ a{
 }
 
 header{
-    height: 100vh;
+    min-height: 100vh;
     color: var(--color-white);
     overflow: hidden;
 }
@@ -189,9 +189,9 @@ section{
         }
         .image{
             border-radius: var(--br-sm-2);
-            height: 75%;
-            width: 50%;
-            margin-left: 8rem;
+            height: 75%; //75
+            width: 50%; //50
+            margin-left: 8rem; //8rem
             background-color: black;
             transition: all .4s ease-in-out;
             img{    
