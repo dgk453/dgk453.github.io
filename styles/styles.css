@@ -53,7 +53,7 @@ a {
 }
 
 header {
-  min-height: 100vh;
+  height: 100vh;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -95,16 +95,7 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
-}
-@-webkit-keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0) scaleY 1;
-  }
+  animation: scaleAnim 1s ease-in-out;
 }
 @keyframes scaleAnim {
   0% {
@@ -246,8 +237,7 @@ section {
   white-space: nowrap;
   overflow: hidden;
   width: 170px;
-  -webkit-animation: type 2s steps(40, end) forwards;
-          animation: type 2s steps(40, end) forwards;
+  animation: type 2s steps(40, end) forwards;
 }
 
 .name-container h1:nth-of-type(2) {
@@ -264,31 +254,7 @@ section {
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: shring-animation 2.4s steps(40, end) 2s forwards, blinking 0.5s step-end infinite alternate;
-          animation: shring-animation 2.4s steps(40, end) 2s forwards, blinking 0.5s step-end infinite alternate;
-}
-
-@-webkit-keyframes shring-animation {
-  0% {
-    background-position: 0 0;
-    opacity: 0;
-    width: 0;
-  }
-  1% {
-    background-position: 0 0;
-    opacity: 1;
-    border-right: 1px solid orange;
-  }
-  50% {
-    background-position: 160px 0;
-    opacity: 1;
-    border-right: 1px solid orange;
-  }
-  100% {
-    background-position: 40 0px 0;
-    opacity: 1;
-    border-right: none;
-  }
+  animation: shring-animation 2.4s steps(40, end) 2s forwards, blinking 0.5s step-end infinite alternate;
 }
 
 @keyframes shring-animation {
@@ -313,17 +279,6 @@ section {
     border-right: none;
   }
 }
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  1%, 99% {
-    border-right: 1px solid orange;
-  }
-  100% {
-    border-right: none;
-  }
-}
 @keyframes type {
   0% {
     width: 0;
@@ -333,11 +288,6 @@ section {
   }
   100% {
     border-right: none;
-  }
-}
-@-webkit-keyframes blinking {
-  50% {
-    border-color: transparent;
   }
 }
 @keyframes blinking {
@@ -361,28 +311,7 @@ section {
   position: absolute;
   border-radius: 50%;
   left: 60%;
-  -webkit-animation: ball 0.5s alternate infinite ease;
-          animation: ball 0.5s alternate infinite ease;
-}
-
-@-webkit-keyframes ball {
-  0% {
-    top: 25%;
-    height: 5px;
-    border-radius: 50px 50px 25px 25px;
-    transform: scaleX(1.7);
-    background-color: #ff3ea5;
-  }
-  40% {
-    height: 20px;
-    border-radius: 50%;
-    transform: scaleX(1);
-    background-color: #edff00;
-  }
-  100% {
-    top: 10%;
-    background-color: #00a4cc;
-  }
+  animation: ball 0.5s alternate infinite ease;
 }
 
 @keyframes ball {
@@ -406,14 +335,12 @@ section {
 }
 .ball:nth-child(2) {
   left: 65%;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .ball:nth-child(3) {
   left: 70%;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .shadow {
@@ -426,25 +353,7 @@ section {
   z-index: -1;
   left: 60.5%;
   filter: blur(1px);
-  -webkit-animation: shadow 0.5s alternate infinite ease;
-          animation: shadow 0.5s alternate infinite ease;
-}
-
-@-webkit-keyframes shadow {
-  0% {
-    transform: scaleX(1.5);
-    background-color: rgba(255, 62, 165, 0.4196078431);
-  }
-  40% {
-    transform: scaleX(1);
-    opacity: 0.7;
-    background-color: rgba(237, 255, 0, 0.4);
-  }
-  100% {
-    transform: scaleX(0.2);
-    opacity: 0.4;
-    background-color: rgba(0, 164, 204, 0.4196078431);
-  }
+  animation: shadow 0.5s alternate infinite ease;
 }
 
 @keyframes shadow {
@@ -465,14 +374,12 @@ section {
 }
 .shadow:nth-child(4) {
   left: 65%;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .shadow:nth-child(5) {
   left: 70%;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 /*About*/
@@ -939,25 +846,6 @@ section {
     width: 20px;
     height: 20px;
   }
-  @-webkit-keyframes ball {
-    0% {
-      top: 4%;
-      height: 5px;
-      border-radius: 50px 50px 25px 25px;
-      transform: scaleX(1.7);
-      background-color: #ff3ea5;
-    }
-    40% {
-      height: 20px;
-      border-radius: 50%;
-      transform: scaleX(1);
-      background-color: #edff00;
-    }
-    100% {
-      top: 0.5%;
-      background-color: #00a4cc;
-    }
-  }
   @keyframes ball {
     0% {
       top: 4%;
@@ -979,8 +867,7 @@ section {
   }
   .ball:nth-child(2) {
     left: 45%;
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
+    animation-delay: 0.2s;
   }
   .ball:nth-child(3) {
     left: 50%;
@@ -993,13 +880,11 @@ section {
   }
   .shadow:nth-child(4) {
     left: 45.5%;
-    -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
+    animation-delay: 0.2s;
   }
   .shadow:nth-child(5) {
     left: 50.5%;
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
+    animation-delay: 0.3s;
   }
   .about-container {
     grid-template-columns: 1fr;
