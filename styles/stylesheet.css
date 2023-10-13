@@ -443,7 +443,13 @@ section {
 .about-container .left-about p {
   line-height: 1.5rem;
   font-size: 1rem;
-  padding: 1.5rem 2.5rem 1.5rem 0.5rem;
+  padding: 1.5rem 2.5rem 0rem 0.5rem;
+  color: var(--color-grey-1);
+}
+.about-container .left-about .info {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  padding: .75rem 2.5rem 1.5rem 0.5rem;
   color: var(--color-grey-1);
 }
 .about-container .left-about h4 {
