@@ -13,7 +13,7 @@ function PageTransitions(){
         })
     }
 
-    //Sections active class
+    //Sections active class 
     allSections.addEventListener('click', (e) =>{
         const id = e.target.dataset.id;
         if (id){
@@ -33,7 +33,7 @@ function PageTransitions(){
         }
     })
 
-    //Toggle Theme 
+    //Toggle Theme Button
     const themeBtn = document.querySelector('.theme-btn');
     themeBtn.addEventListener('click', ()=> {
         let element = document.body;
